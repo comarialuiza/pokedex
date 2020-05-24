@@ -1,26 +1,22 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container, Name, Image } from './styles';
 
 function Pokemon({ pokemon }) {
     return(
-        <div className="pokemon">
-            <div className="pokemon__name">
-                <p>{ pokemon.name }</p>
-            </div>
-            <div className="pokemon__meta">
-                <p>{ pokemon.maxHP }</p>
-                <p>{ pokemon.maxCP }</p>
-            </div>
-            <div className="pokemon__image">
+        <Container>
+            <Name>
+                { pokemon.name }
+            </Name>
+            <Image>
                 <img src={ pokemon.image } alt={ pokemon.name } />
-            </div>
-            <div className="pokemon__attacks">
+            </Image>
+            { /* <div className="pokemon__attacks">
                 { pokemon.attacks.special.slice(0, 3).map(attack => (
                     <span key={ `${attack.name} - ${attack.damage}` }>{ attack.name }</span>
                 )) }
-            </div>
-        </div>
+                </div> */ }
+        </Container>
     );
 }
 

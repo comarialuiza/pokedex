@@ -2,7 +2,8 @@ import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 
-import PokemonsContainer from './containers/PokemonsContainer';
+import PokemonsContainer from './containers/PokemonContainer';
+import GlobalStyle from './styles/global';
 
 function App() {
   const client = new ApolloClient({
@@ -14,6 +15,7 @@ function App() {
       <main>
         <PokemonsContainer />
       </main>
+      <GlobalStyle />
     </ApolloProvider>
   );
 }
